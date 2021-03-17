@@ -13,7 +13,7 @@ info:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-   - url: http://localhost:8008
+   - url: http://localhost:8011
      description: tickets
 tags:
 - name: ticket
@@ -109,6 +109,26 @@ paths:
          parameters:
          -  in: "path"
             description: GpDelete
+            name: id
+            required: true
+            schema:
+               type: "string"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+      get:
+         tags:
+         -  ticket
+         description: GpGetNounById
+         parameters:
+         -  in: "path"
+            description: GpGetNounById
             name: id
             required: true
             schema:

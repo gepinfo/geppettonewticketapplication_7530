@@ -26,6 +26,8 @@ const routes: Routes = [
 
 { path : 'createticket', loadChildren: () => import('./createticket/createticket.module').then(m => m.CreateticketModule), canActivate: [AuthGuard] } , 
 { path : 'getalltickets', loadChildren: () => import('./getalltickets/getalltickets.module').then(m => m.GetallticketsModule), canActivate: [AuthGuard] } , 
+{ path : 'updateticket', loadChildren: () => import('./updateticket/updateticket.module').then(m => m.UpdateticketModule), canActivate: [AuthGuard] } , 
+{ path : 'searchticket', loadChildren: () => import('./searchticket/searchticket.module').then(m => m.SearchticketModule), canActivate: [AuthGuard] } , 
 { path : 'createseverity', loadChildren: () => import('./createseverity/createseverity.module').then(m => m.CreateseverityModule), canActivate: [AuthGuard] } , 
 { path : 'createservicetype', loadChildren: () => import('./createservicetype/createservicetype.module').then(m => m.CreateservicetypeModule), canActivate: [AuthGuard] } , 
 ];

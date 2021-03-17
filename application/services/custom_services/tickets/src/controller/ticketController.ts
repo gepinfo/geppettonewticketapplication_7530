@@ -49,6 +49,13 @@ ticket.GpDelete(req, (response) => {
      res.json(response);
                 new CustomLogger().showLogger('info', 'Exit from ticketController.ts: GpDelete');
     })}
+public GpGetNounById(req: Request, res: Response) {
+ticket.GpGetNounById(req, (response) => {
+                new CustomLogger().showLogger('info', 'Enter into ticketController.ts: GpGetNounById');
+     res.status(200);
+     res.json(response);
+                new CustomLogger().showLogger('info', 'Exit from ticketController.ts: GpGetNounById');
+    })}
 
 
 }

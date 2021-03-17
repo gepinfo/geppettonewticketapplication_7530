@@ -23,17 +23,19 @@
       <div class='closebtn' href='javascript:void(0)' onclick='closeNav()' id='template-if7ki'>×</div>
       <div id='MainMenu'>
 		<div class="list-group panel"><a class="list-group-item list-group-item-success" *ngIf='userId!=null'  [routerLink]="['/home']">{{'source.home' | i18next}}</a></div><div class="list-group panel" *ngIf='isAdminUser'><a class="list-group-item list-group-item-success" [routerLink]="['/admin']">{{'source.admin' | i18next}}</a></div>
-<div class="list-group panel" *ngIf="isApplicable('createservicetype') && userId">
-                                    <a href="#servicetypes" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">servicetypes <i class="fa fa-caret-down"></i></a>
-                                    <div class="collapse" id="servicetypes">
-<a class="list-group-item" [routerLink]="['/createservicetype']">{{'source.createservicetype' | i18next}}</a>
-</div>
-</div>
 <div class="list-group panel" *ngIf="isApplicable('createticket') && userId">
                                     <a href="#tickets" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">tickets <i class="fa fa-caret-down"></i></a>
                                     <div class="collapse" id="tickets">
 <a class="list-group-item" [routerLink]="['/createticket']">{{'source.createticket' | i18next}}</a>
 <a class="list-group-item" [routerLink]="['/getalltickets']">{{'source.getalltickets' | i18next}}</a>
+<a class="list-group-item" [routerLink]="['/updateticket']">{{'source.updateticket' | i18next}}</a>
+<a class="list-group-item" [routerLink]="['/searchticket']">{{'source.searchticket' | i18next}}</a>
+</div>
+</div>
+<div class="list-group panel" *ngIf="isApplicable('createservicetype') && userId">
+                                    <a href="#servicetypes" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">servicetypes <i class="fa fa-caret-down"></i></a>
+                                    <div class="collapse" id="servicetypes">
+<a class="list-group-item" [routerLink]="['/createservicetype']">{{'source.createservicetype' | i18next}}</a>
 </div>
 </div>
 <div class="list-group panel" *ngIf="isApplicable('createseverity') && userId">

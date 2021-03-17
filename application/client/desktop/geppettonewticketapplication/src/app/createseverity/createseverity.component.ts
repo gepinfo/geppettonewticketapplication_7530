@@ -9,7 +9,7 @@ import { CreateseverityService } from './createseverity.service';
 
 export class CreateseverityComponent implements OnInit {
     public severity = {
-        severityname: '',
+        severity: '',
         description: '',
     }
 
@@ -21,7 +21,7 @@ export class CreateseverityComponent implements OnInit {
     }
     GpCreate() {
         this.createseverityService.GpCreate(this.severity).subscribe(data => {
-            this.severity.severityname = ''
+            this.severity.severity = ''
  	 	this.severity.description = ''
         },
         error => {

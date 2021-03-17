@@ -54,20 +54,20 @@ service:
   tickets: 
     name: tickets
     type: NodePort
-    port: 8008
-    targetPort: 8008
+    port: 8011
+    targetPort: 8011
 
   severity: 
     name: severity
     type: NodePort
-    port: 8009
-    targetPort: 8009
+    port: 8012
+    targetPort: 8012
 
   servicetypes: 
     name: servicetypes
     type: NodePort
-    port: 8010
-    targetPort: 8010
+    port: 8013
+    targetPort: 8013
 
 
 deployment:

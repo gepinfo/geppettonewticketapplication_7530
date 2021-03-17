@@ -8,7 +8,7 @@ export const severitySchema = new Schema({
    created_by: { type: String },
    last_modified_by: { type: String },
    last_modified_date: { type: Date, default: Date.now },
-   severityname: String,
+   severity: String,
    description: String
 })
 

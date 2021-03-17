@@ -69,7 +69,7 @@ spec:
           image: {{ .Values.deployment.tickets.image }}
           ports:
             - name: http-port
-              containerPort: 8008
+              containerPort: 8011
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -81,7 +81,7 @@ spec:
           image: {{ .Values.deployment.severity.image }}
           ports:
             - name: http-port
-              containerPort: 8009
+              containerPort: 8012
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db
@@ -93,7 +93,7 @@ spec:
           image: {{ .Values.deployment.servicetypes.image }}
           ports:
             - name: http-port
-              containerPort: 8010
+              containerPort: 8013
           env:
             - name: {{ .Values.app.prefix }}-app-db
               value: {{ .Values.app.prefix }}-app-db

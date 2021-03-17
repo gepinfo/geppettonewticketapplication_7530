@@ -17,6 +17,7 @@ app.route('/ticket').put(this.ticket.GpUpdate);
 app.route('/ticket').get(this.ticket.GpGetAllValues);
 app.route('/ticket').post(this.ticket.GpCreate);
 app.route('/ticket/:id').delete(this.ticket.GpDelete);
+app.route('/ticket/:id').get(this.ticket.GpGetNounById);
      }
 
 }

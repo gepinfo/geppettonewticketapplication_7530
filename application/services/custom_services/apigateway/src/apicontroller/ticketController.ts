@@ -19,6 +19,7 @@ this.router.put('/ticket', this.GpUpdate);
 this.router.get('/ticket', this.GpGetAllValues);
 this.router.post('/ticket', this.GpCreate);
 this.router.delete('/ticket/:id', this.GpDelete);
+this.router.get('/ticket/:id', this.GpGetNounById);
     }
 
 public GpSearch(req: Request, res: Response) {
@@ -83,6 +84,17 @@ public GpDelete(req: Request, res: Response) {
               req.baseUrl === '/mobile' ? res.send(result) :
               req.baseUrl === '/desktop' ? res.send(result) : res.send(null)
             new CustomLogger().showLogger('info', 'Exit from ticketController.ts: GpDelete');
+        }).catch(err => {
+            res.send(err);
+        });
+    }
+public GpGetNounById(req: Request, res: Response) {
+            new CustomLogger().showLogger('info', 'Enter into ticketController.ts: GpGetNounById');
+        new ApiAdaptar().get(Constant.TICKETSURL + `${req.url}` )
+        .then((res: any) => res.response.json()).then(result => {
+              req.baseUrl === '/mobile' ? res.send(result) :
+              req.baseUrl === '/desktop' ? res.send(result) : res.send(null)
+            new CustomLogger().showLogger('info', 'Exit from ticketController.ts: GpGetNounById');
         }).catch(err => {
             res.send(err);
         });
