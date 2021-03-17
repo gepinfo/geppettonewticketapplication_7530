@@ -1,0 +1,7 @@
+{
+  "name": "geppettonewticketapplication",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

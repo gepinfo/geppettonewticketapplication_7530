@@ -1,0 +1,16 @@
+<h2 class="screen-align">Createseverity</h2>
+<div id="template-ifug" class="row">
+    <div id="template-i5ah" class="cell">
+        <label id="template-ibj1" class="label">Severity Name</label>
+        <input id="template-ip4m" placeholder="Enter severity name"
+        [(ngModel)]="severity.severityname" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+    <div id="template-iy3j" class="cell">
+        <label id="template-i1xj" class="label">Description</label>
+        <input id="template-i64d" placeholder="Enter Description"
+        [(ngModel)]="severity.description" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+</div>
+<button id="template-i5de" (click)="GpCreate()" class="button btn btn-primary">Create</button>

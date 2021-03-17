@@ -1,0 +1,37 @@
+<h2 class="screen-align">Createticket</h2>
+<div id="template-iy6l" class="row">
+    <div id="template-ieym" class="cell">
+        <label id="template-iy29" class="label">Name</label>
+        <input id="template-ilqe" placeholder="Enter ticket name"
+        [(ngModel)]="ticket.name" [ngModelOptions]="{standalone: true}" class="input form-control"
+        />
+    </div>
+    <div id="template-i62g" class="cell">
+        <label id="template-iaii" class="label">Description</label>
+        <input id="template-idbmm" placeholder="Enter Description"
+        [(ngModel)]="ticket.description" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+</div>
+<div id="template-i4yq" class="row">
+    <div id="template-itwl" class="cell">
+        <label id="template-iutma" class="label">Service Type</label>
+        <div id="template-ipd5x" class="">
+            <ng-select id="template-iyozp" name="dynamicdropdown_template-iyozp" [searchable]="true"
+            [virtualScroll]="true" [items]="servicetypesitemArray" bindLabel="servicetypename"
+            bindValue="servicetypename" [(ngModel)]="ticket.type" [ngModelOptions]="{standalone: true}"
+            (click)="servicetypesGpGetAllValues()" class="form-control"></ng-select>
+        </div>
+    </div>
+    <div id="template-in8s" class="cell">
+        <label id="template-i1j9r" class="label">Severity</label>
+        <div id="template-ie6jh" class="">
+            <ng-select id="template-id44l" name="dynamicdropdown_template-id44l" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="severityname"
+            bindValue="severityname" [(ngModel)]="ticket.severity" [ngModelOptions]="{standalone: true}"
+            (click)="severityGpGetAllValues()" class="form-control"></ng-select>
+        </div>
+    </div>
+</div>
+<div id="template-ii2rz" class=""></div>
+<button id="template-i13mk" (click)="GpCreate()" class="button btn btn-primary">Button</button>
